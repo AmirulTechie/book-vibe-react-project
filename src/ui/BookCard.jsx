@@ -7,7 +7,7 @@ const BookCard = ({books}) => {
             <h2 className="font-bold text-3xl text-center">Books</h2>
             <div className='my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
                 {books.map(book => (
-                    <Link to={`/bookDetails/${book.bookId}`} key={book.id} className="card bg-base-100 shadow-sm p-4 hover:cursor-pointer">
+                    <Link to={`/bookDetails/${book.bookId}`} key={book.bookId} className="card bg-base-100 shadow-sm p-4 hover:cursor-pointer">
 
                         <figure className="bg-gray-100 rounded-xl p-6">
                             <img

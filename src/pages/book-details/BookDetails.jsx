@@ -1,4 +1,6 @@
+import { useContext} from 'react';
 import { useLoaderData, useParams } from 'react-router';
+import { BookContext } from '../../context/BookContext';
 
 
 const BookDetails = () => {
@@ -7,6 +9,9 @@ const BookDetails = () => {
     const books = useLoaderData();
     
     const expectedBook = books.find(book=> book.bookId == bookId);
+
+    const {handleMarkAsRead} = useContext(BookContext)
+
 
     return (
         <div className="my-12 container mx-auto max-w-5xl px-6">
@@ -70,8 +75,8 @@ const BookDetails = () => {
 
                     {/* Buttons */}
                     <div className="flex gap-4 mt-4">
-                        <button className="btn btn-outline px-8">Read</button>
-                        <button className="btn bg-cyan-400 text-white px-8 border-none hover:bg-cyan-500">Wishlist</button>
+                        <button onClick={()=>handleMarkAsRead(expectedBook)} className="btn btn-outline px-8">Mark as Read</button>
+                        <button className="btn bg-cyan-400 text-white px-8 border-none hover:bg-cyan-500">Add to Wishlist</button>
                     </div>
 
                 </div>

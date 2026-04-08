@@ -19,7 +19,7 @@ const ErrorPage = () => {
                 <div className="mt-6">
                     <Link
                         to="/"
-                        className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition"
+                        className="px-6 py-3 bg-[#23BE0A] text-white rounded-lg shadow hover:bg-green-700 transition"
                     >
                         Go Home
                     </Link>
